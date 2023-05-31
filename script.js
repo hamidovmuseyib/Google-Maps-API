@@ -31,7 +31,7 @@ function calcRoute() {
         if (status == "OK") {
         directionsRenderer.setDirections(result);
         let distance = result.routes[0].legs[0].distance.text.replace("mil", "km");
-        let duration = result.routes[0].legs[0].duration.text.replace("dakika", "dəqiqə").replace("hours", "saat");
+        let duration = result.routes[0].legs[0].duration.text.replace("mins", "dəqiqə").replace("hours", "saat").replace("dakika","dəqiqə");
         distanceDiv.innerHTML = "Təxmini məsafə: " + distance + "<br>Təxmini vaxt: " + duration;
     } else {
         distanceDiv.innerHTML = "Xəta: Məsafəni tapmaq mümkün olmadı.";
